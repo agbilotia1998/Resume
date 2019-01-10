@@ -1,0 +1,259 @@
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+
+\name{Ayush}{Gupta}
+
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-23mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+ \faEnvelopeO\enspace agb.ayushgupta@gmail.com & \faGithub\enspace \href{https://github.com/agbilotia1998}{agbilotia1998} &  \faMobile\enspace +91-8504030676\\  
+\end{tabular}
+\end{center}
+
+\section{EDUCATION}
+{\customcventry{2016–2020}{Bachelor of Technology in Information Technology, CGPA - 8.92/10}{Indian Institute of Information Technology, Allahabad}{Allahabad, India}{}{}}
+
+{\customcventry{2014–2016}{Class XII, Board of Secondary Education Rajasthan, Percentage – 93.80}{Tagore Children Academy}{Surajgarh, India}{}{}}
+
+{\customcventry{2012–2014}{Class X, Central Board of Secondary Education, CGPA - 10/10}{ Tagore Public School}{Surajgarh, India}{}{}}
+
+
+\section{INTERNSHIP EXPERIENCE}
+
+{\customcventry{April 18 - August 18}{Web Developer}{Google Summer of Code, FOSSASIA.}{Remote Intern}{}
+{\begin{itemize}
+  \item Worked on implementing task-queue for multiple requests and improving the file-upload structure.
+  \item Improved the user interface and user experience for the generated application.
+  \item Parallelized the Travis build of project.
+  \item Wrote Mocha unit tests for the added functionalities.
+\end{itemize}
+}
+
+{\customcventry{May 17 - July 17}{MEAN Stack Developer}{Sierre Technologies, New Jersey.}{Remote Intern}{}
+{\begin{itemize}
+  \item Worked on API authentication using JWT.
+  \item Prepared backend modules using express framework.
+  \item Integrated third party payment module.
+  \item Received offer from Sierre Technologies to continue internship remotely.
+\end{itemize}
+}
+
+
+
+\section{PROJECTS}
+
+{\customcvproject{\href{https://github.com/fossasia/open-event-webapp}{Open Event Webapp}}{Express, Javascript}
+  {\begin{itemize}
+    \item Google Summer of Code Project, helping event organizers to generate a static website for their event.
+    \item Implemented job queue backed by the Redis server to handle multiple requests at a time.
+    \item Added REST API for event generation and integration with eventyay platform.
+  \end{itemize}
+  }
+}
+
+{\customcvproject{\href{https://github.com/agbilotia1998/Gecho}{Gecho}}{Flask, Raspberry- pi}
+{\begin{itemize}
+  \item A gesture controlled home assistant.
+  \item Raspberry pi is embedded in this assistant, whose camera module is invoked by a clap.
+  \item The captured image is passed through a CNN pretrained model which determines the gesture.
+  \item The gesture is sent as a response to raspberry pi and the module performs the function accordingly.
+\end{itemize}
+}
+
+{\customcvproject{\href{https://github.com/agbilotia1998/Lecture-Connect}{Lecture Connect}}{Socket.io}
+{\begin{itemize}
+  \item A Real time lecture translator for different languages.
+  \item Used socket.io for showing the real time results to the user.
+  \item Used chrome browser API for taking voice input.
+\end{itemize}
+}
+}
+
+{\customcvproject{\href{https://github.com/agbilotia1998/NCDEX-live-rates-API-and-sms}{NCDEX Live Rates API and SMS}}{Cheerio}
+{\begin{itemize}
+  \item An application to send live NCDEX rates through SMS.
+  \item Used cheerio library of npm for web scraping.
+  \item Used regex to manipulate scraped data.
+ \item Used Twillio API for sending SMS.
+\end{itemize}
+}
+}
+
+{\customcvproject{\href{https://github.com/adeora7/placements_portal}{Placement Portal IIITA}}{Slim}
+{\begin{itemize}
+ \item Web portal for the placement related activities.
+ \item Used PHP Slim framework for server side modeling.
+ \item Used MongoDB for storing data.
+ \item Authentication with LDAP.
+ \item Used Socket.io for adding chat functionality.
+\end{itemize}
+}
+}
+
+{\customcvproject{\href{https://github.com/agbilotia1998/PHP-MySQL-Event-Management-System}{Event Management System}}{PHP}
+{\begin{itemize}
+ \item Web portal for creating and notifying users of any event.
+ \item Used PHP to model the server side of the application.
+ \item Used MySQL(PDO) as a database for this project.
+ \item Implemented `interested` and `going` features with CRUD functionality available for the
+organizers.
+\end{itemize}
+}
+}
+
+
+\section{SKILLS AND INTERESTS}
+{\begin{itemize}
+    \item Programming Languages: C/C++, Java, Javascript, PHP
+    \item Frameworks: Angular, Express
+    \item Databases : SQL, MongoDB
+    \item Template Engines : EJS, Handlebars
+    \item Other : HTML, CSS, jQuery
+\end{itemize}
+}
+
+\section{AWARDS AND ACHIEVEMENTS}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item Finalist – Codeheat (A six months long open source coding contest organised by FOSSASIA) | 2018
+          \item Secured second position in IIITA Hacks (A student held hackathon at IIITA)| 2017
+          \item Published an Amazon Alexa skill named Climate Scientia: Facts | 2017
+          \item Obtained 98 percentile in JEE Main (previously AIEEE) among 2 million candidates. | 2016
+          \item Secured 9th district merit on scoring 93.80\% in high school. | 2016
+          \item Secured 7th position in State Talent Search Exam(STSE). | 2015
+		\end{itemize}}%
+\end{minipage}%
+      
+}
+
+\section{POSITIONS OF RESPONSIBILITY}
+
+{\customcventry{April 18 - Present, March 17 - April 18}{Coordinator, Member}{Web Development Wing, Geekhaven}{}{}
+{\begin{itemize}
+  \item Responsible for web operations in college festivals and portals.
+  \item Responsible for conducting workshops and events to teach web development .
+\end{itemize}
+}
+
+{\customcventry{November 17 - January 18, October 18 - December 2018}{Mentor}{Google Code-In, FOSSASIA}{}{}
+{\begin{itemize}
+  \item Helped the pre-university students to learn about open source.
+  \item Reviewed the work done by students and helped them in completing their task.
+\end{itemize}
+}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
